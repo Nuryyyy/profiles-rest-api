@@ -11,6 +11,8 @@
 
 # Use the official Ubuntu 18.04 image as the base
 FROM ubuntu:18.04
+WORKDIR /code
+COPY ./requirements.txt /code/requirements.txt
 
 # Update package sources and install necessary packages
 RUN apt-get update && apt-get install -y \
